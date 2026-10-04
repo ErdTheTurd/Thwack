@@ -1,6 +1,6 @@
 /* Thwack marketing site
    Direction: deep fairway ink + warm tracer gold on cool mist greens.
-   Brand: Syne. Body: Literata. */
+   Type: SF Rounded (app) → Nunito on the web. */
 
 :root {
   --ink: #0c1a12;
@@ -16,8 +16,9 @@
   --line: color-mix(in srgb, var(--ink) 12%, transparent);
   --header-h: 4.25rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --font-brand: "Syne", "Avenir Next", "Segoe UI", sans-serif;
-  --font-body: "Literata", "Iowan Old Style", "Palatino Linotype", serif;
+  --font: ui-rounded, "SF Pro Rounded", "Nunito", "Avenir Next Rounded", system-ui, sans-serif;
+  --font-brand: var(--font);
+  --font-body: var(--font);
 }
 
 *,

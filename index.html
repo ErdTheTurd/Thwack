@@ -40,7 +40,7 @@
         <h1>Your range session,<br />measured.</h1>
         <p class="lede">An offline launch monitor that runs on the iPhone you already carry.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#download" data-download>Get the app</a>
+          <a class="btn btn-primary" href="https://apps.apple.com/xxxxxxxxxxxx" data-download>Get the app</a>
           <a class="btn btn-ghost" href="#how">See how it works</a>
         </div>
       </div>
@@ -160,9 +160,9 @@
     <section id="download" class="section download">
       <p class="brand brand-sm">Thwack</p>
       <h2>Ready when you are.</h2>
-      <p class="lede">iPhone launch monitoring without another box of hardware. Request access and we’ll get you on the build.</p>
+      <p class="lede">iPhone launch monitoring without another box of hardware.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="mailto:Ed@thwack.golf?subject=Thwack%20for%20iPhone" data-download>Get the app</a>
+        <a class="btn btn-primary" href="https://apps.apple.com/xxxxxxxxxxxx" data-download>Get the app</a>
         <a class="btn btn-ghost" href="mailto:Ed@thwack.golf">Ed@thwack.golf</a>
       </div>
       <p class="fine">iPhone · iOS 17 or later</p>
@@ -184,13 +184,11 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-    // Swap this when the App Store listing is live:
-    // window.THWACK_APP_STORE_URL = "https://apps.apple.com/app/idXXXXXXXX";
-    if (window.THWACK_APP_STORE_URL) {
-      document.querySelectorAll("[data-download]").forEach((el) => {
-        el.setAttribute("href", window.THWACK_APP_STORE_URL);
-      });
-    }
+    // Replace xxxxxxxxxxxx with your App Store id when live (e.g. id6754321098).
+    window.THWACK_APP_STORE_URL = "https://apps.apple.com/xxxxxxxxxxxx";
+    document.querySelectorAll("[data-download]").forEach((el) => {
+      el.setAttribute("href", window.THWACK_APP_STORE_URL);
+    });
   </script>
 </body>
 </html>

@@ -3,64 +3,194 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thwack</title>
-  <meta name="description" content="Thwack — offline golf launch monitor for iPhone." />
-  <style>
-    :root {
-      --bg: #080808;
-      --text: #f4f4f4;
-      --muted: #b8b8b8;
-      --accent: #3ddc84;
-    }
-    * { box-sizing: border-box; }
-    html { color-scheme: dark; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 2rem;
-      font-family: "SF Pro Text", "Segoe UI", system-ui, -apple-system, sans-serif;
-      background:
-        radial-gradient(1000px 520px at 15% -5%, #143322 0%, transparent 55%),
-        var(--bg);
-      color: var(--text);
-      text-align: center;
-    }
-    .brand {
-      font-size: 0.85rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 700;
-      margin: 0 0 0.75rem;
-    }
-    h1 {
-      font-size: clamp(2.6rem, 8vw, 4.5rem);
-      letter-spacing: -0.04em;
-      margin: 0 0 0.75rem;
-      line-height: 1;
-    }
-    p {
-      color: var(--muted);
-      max-width: 34rem;
-      margin: 0 auto 1.75rem;
-      line-height: 1.55;
-    }
-    a {
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: none;
-      border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
-    }
-  </style>
+  <title>Thwack — Golf launch monitor for iPhone</title>
+  <meta name="description" content="Thwack turns your iPhone into an offline golf launch monitor. Ball speed, launch angle, direction, carry, and a shot tracer — processed on your phone." />
+  <meta property="og:title" content="Thwack — Golf launch monitor for iPhone" />
+  <meta property="og:description" content="Ball speed, launch, carry, and tracer. On your iPhone. Nowhere else." />
+  <meta property="og:image" content="https://thwack.golf/assets/hero.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
-  <div>
-    <p class="brand">Thwack</p>
-    <h1>Offline launch monitor</h1>
-    <p>Camera, tracking, and numbers stay on your iPhone. No account. No upload.</p>
-    <p><a href="Privacy/">Privacy Policy</a></p>
-  </div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="./" aria-label="Thwack home">Thwack</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#measures">Measures</a>
+      <a href="#how">How it works</a>
+      <a href="#privacy-claim">Privacy</a>
+      <a class="nav-cta" href="#download" data-download>Get the app</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/hero.jpg" alt="" width="2400" height="1600" fetchpriority="high" />
+      </div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="brand">Thwack</p>
+        <h1>Your range session,<br />measured.</h1>
+        <p class="lede">An offline launch monitor that runs on the iPhone you already carry.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#download" data-download>Get the app</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="measures" class="section measures">
+      <div class="section-head">
+        <h2>What you get after every swing</h2>
+        <p>Impact to numbers in seconds — the metrics that matter on the range.</p>
+      </div>
+      <ul class="metric-rail" role="list">
+        <li>
+          <span class="metric-name">Ball speed</span>
+          <span class="metric-hint">mph or km/h</span>
+        </li>
+        <li>
+          <span class="metric-name">Launch angle</span>
+          <span class="metric-hint">degrees up</span>
+        </li>
+        <li>
+          <span class="metric-name">Direction</span>
+          <span class="metric-hint">left / right of target</span>
+        </li>
+        <li>
+          <span class="metric-name">Carry</span>
+          <span class="metric-hint">estimated yards</span>
+        </li>
+        <li>
+          <span class="metric-name">Shot tracer</span>
+          <span class="metric-hint">saved to Photos</span>
+        </li>
+      </ul>
+      <svg class="tracer-line" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,70 C280,70 420,10 600,18 S980,75 1200,8" fill="none" stroke="currentColor" stroke-width="2" pathLength="1" />
+      </svg>
+    </section>
+
+    <section id="how" class="section how">
+      <div class="section-head">
+        <h2>Three steps. Then hit.</h2>
+        <p>No sensors on the club. No nets full of hardware. Just the phone and a ball.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="step-num">01</span>
+          <div>
+            <h3>Mount and aim</h3>
+            <p>Tripod behind or beside the ball. Thwack checks that the phone is steady and level.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">02</span>
+          <div>
+            <h3>Lock the ball</h3>
+            <p>Address a white or yellow ball. Thwack finds it, locks focus, and arms for impact.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">03</span>
+          <div>
+            <h3>Swing</h3>
+            <p>High-speed capture around impact, then tracking through the first frames of flight.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="privacy-claim" class="section split">
+      <div class="split-copy">
+        <h2>On your phone.<br />Nowhere else.</h2>
+        <p>Camera frames never leave the device for processing. No account. No cloud upload. Thwack works in airplane mode — the way a launch monitor should when you’re on the range.</p>
+        <p><a class="text-link" href="Privacy/">Read the privacy policy</a></p>
+      </div>
+      <figure class="split-media">
+        <img src="assets/ball.jpg" alt="Close view of a golf ball on a tee" width="1600" height="1060" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="section practice">
+      <div class="section-head">
+        <h2>Built for how you actually practice</h2>
+        <p>More than a one-shot gadget — a session tool for the bay or the grass range.</p>
+      </div>
+      <div class="practice-grid">
+        <article>
+          <h3>Practice sessions</h3>
+          <p>Stack shots by club. Compare ball speed and start line without digging through a spreadsheet.</p>
+        </article>
+        <article>
+          <h3>Course mode</h3>
+          <p>Walk fictional practice layouts hole by hole — carry left, pick a club, take the shot.</p>
+        </article>
+        <article>
+          <h3>Big-screen numbers</h3>
+          <p>AirPlay or HDMI to a TV. Speed and launch stay readable from behind the ball.</p>
+        </article>
+        <article>
+          <h3>Tracer keepsakes</h3>
+          <p>Export a tracer video and save it to Photos when you want the swing to travel.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section setup">
+      <div class="section-head">
+        <h2>What you need</h2>
+        <p>If you can film a swing in daylight, you can run Thwack.</p>
+      </div>
+      <ul class="need-list" role="list">
+        <li><strong>iPhone</strong> · iOS 17 or later, with a high-frame-rate camera</li>
+        <li><strong>Tripod</strong> · steady mount; printable stand available for the correct aim angle</li>
+        <li><strong>Ball</strong> · white or yellow, clearly visible against the background</li>
+        <li><strong>Light</strong> · outdoor range or a well-lit bay — Thwack is not a night scope</li>
+      </ul>
+    </section>
+
+    <section id="download" class="section download">
+      <p class="brand brand-sm">Thwack</p>
+      <h2>Ready when you are.</h2>
+      <p class="lede">iPhone launch monitoring without another box of hardware. Request access and we’ll get you on the build.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:Ed@thwack.golf?subject=Thwack%20for%20iPhone" data-download>Get the app</a>
+        <a class="btn btn-ghost" href="mailto:Ed@thwack.golf">Ed@thwack.golf</a>
+      </div>
+      <p class="fine">iPhone · iOS 17 or later</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="wordmark">Thwack</span>
+      <p>Offline golf launch monitor.</p>
+    </div>
+    <div class="footer-links">
+      <a href="Privacy/">Privacy</a>
+      <a href="mailto:Ed@thwack.golf">Ed@thwack.golf</a>
+      <a href="https://github.com/ErdTheTurd/Thwack">GitHub</a>
+    </div>
+    <p class="footer-note">© <span id="y"></span> Thwack. thwack.golf</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    // Swap this when the App Store listing is live:
+    // window.THWACK_APP_STORE_URL = "https://apps.apple.com/app/idXXXXXXXX";
+    if (window.THWACK_APP_STORE_URL) {
+      document.querySelectorAll("[data-download]").forEach((el) => {
+        el.setAttribute("href", window.THWACK_APP_STORE_URL);
+      });
+    }
+  </script>
 </body>
 </html>

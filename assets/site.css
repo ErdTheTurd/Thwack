@@ -484,6 +484,48 @@ a { color: var(--fairway-deep); }
   letter-spacing: -0.02em;
 }
 
+.need-list a {
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--fairway) 40%, transparent);
+}
+
+/* Tripod buy / print */
+.tripod-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 3rem;
+}
+
+.tripod-actions > div {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.tripod-actions h3 {
+  font-family: var(--font-brand);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.45rem;
+}
+
+.tripod-actions p {
+  margin: 0 0 1.25rem;
+  color: var(--ink-soft);
+  max-width: 28rem;
+}
+
+.tripod-actions .btn-ghost {
+  color: var(--ink);
+}
+
+@media (max-width: 700px) {
+  .tripod-actions { grid-template-columns: 1fr; gap: 0; }
+  .tripod-actions > div:first-child { border-bottom: 0; }
+}
+
 /* Download */
 .download {
   text-align: center;

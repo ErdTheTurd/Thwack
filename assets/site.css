@@ -260,7 +260,7 @@ a { color: var(--fairway-deep); }
 .split-copy h2,
 .download h2 {
   font-family: var(--font-brand);
-  font-weight: 750;
+  font-weight: 700;
   font-size: clamp(1.85rem, 4vw, 2.75rem);
   letter-spacing: -0.04em;
   line-height: 1.08;

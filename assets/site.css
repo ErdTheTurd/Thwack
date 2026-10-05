@@ -25,10 +25,34 @@
 *::before,
 *::after { box-sizing: border-box; }
 
+/* Inner pages sit under the fixed header */
+.page {
+  padding: calc(var(--header-h) + 2.5rem) 0 4rem;
+}
+
+.page > .section:first-child {
+  padding-top: 0;
+}
+
+.site-nav a.is-active {
+  color: var(--ink);
+  box-shadow: inset 0 -2px 0 var(--tracer);
+}
+
+.page-hero-mini {
+  width: min(1080px, calc(100% - 2.5rem));
+  margin: 0 auto 1rem;
+}
+
+.page-hero-mini .brand-sm {
+  margin-bottom: 0.35rem;
+}
+
 html {
   color-scheme: light;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
+
 
 body {
   margin: 0;

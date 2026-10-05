@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Practice | Thwack</title>
+  <meta name="description" content="Sessions, course mode, big-screen numbers, and tracer videos." />
+  <meta property="og:title" content="Practice | Thwack" />
+  <meta property="og:description" content="Sessions, course mode, big-screen numbers, and tracer videos." />
+  <meta property="og:image" content="https://thwack.golf/assets/hero.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="../" aria-label="Thwack home">Thwack</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="" href="../measures/">Measures</a>
+      <a class="" href="../how/">How it works</a>
+      <a class="is-active" href="../practice/">Practice</a>
+      <a class="" href="../tripod/">Tripod</a>
+      <a class="" href="../Privacy/">Privacy</a>
+      <a class="nav-cta" href="https://apps.apple.com/xxxxxxxxxxxx" data-download>Get the app</a>
+    </nav>
+  </header>
+  <main id="main" class="page">
+    <section class="section practice">
+      <div class="section-head">
+        <h2>Useful on a real range day</h2>
+        <p>Not just one cool clip. A session you can work through.</p>
+      </div>
+      <div class="practice-grid">
+        <article>
+          <h3>Practice sessions</h3>
+          <p>Save shots by club. Check speed and start line without opening a notes app.</p>
+        </article>
+        <article>
+          <h3>Course mode</h3>
+          <p>Fake holes for practice. See carry left, pick a club, hit the shot.</p>
+        </article>
+        <article>
+          <h3>Big-screen numbers</h3>
+          <p>AirPlay or HDMI to a TV so you can read speed from behind the ball.</p>
+        </article>
+        <article>
+          <h3>Tracer videos</h3>
+          <p>Export a tracer and drop it in Photos when you want to keep the swing.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="wordmark">Thwack</span>
+      <p>Offline golf launch monitor.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../measures/">Measures</a>
+      <a href="../how/">How it works</a>
+      <a href="../tripod/">Tripod</a>
+      <a href="../Privacy/">Privacy</a>
+      <a href="mailto:Ed@thwack.golf">Ed@thwack.golf</a>
+    </div>
+    <p class="footer-note">© <span id="y"></span> Thwack. thwack.golf</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    window.THWACK_APP_STORE_URL = "https://apps.apple.com/xxxxxxxxxxxx";
+    document.querySelectorAll("[data-download]").forEach((el) => {
+      el.setAttribute("href", window.THWACK_APP_STORE_URL);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phone stand | Thwack</title>
+  <meta name="description" content="Buy a printed Thwack phone stand for $6, or the 3D model for $1." />
+  <meta property="og:title" content="Phone stand | Thwack" />
+  <meta property="og:description" content="Buy a printed Thwack phone stand for $6, or the 3D model for $1." />
+  <meta property="og:image" content="https://thwack.golf/assets/hero.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="../" aria-label="Thwack home">Thwack</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="" href="../measures/">Measures</a>
+      <a class="" href="../how/">How it works</a>
+      <a class="" href="../practice/">Practice</a>
+      <a class="is-active" href="../tripod/">Tripod</a>
+      <a class="" href="../Privacy/">Privacy</a>
+      <a class="nav-cta" href="https://apps.apple.com/xxxxxxxxxxxx" data-download>Get the app</a>
+    </nav>
+  </header>
+  <main id="main" class="page">
+    <section class="section tripod">
+      <div class="section-head">
+        <h2>The phone stand</h2>
+        <p>Holds the phone about 15° down, which is where Thwack likes to aim.</p>
+      </div>
+      <div class="tripod-actions">
+        <div>
+          <h3>Buy printed · $6</h3>
+          <p>We print it and ship it. Email to order.</p>
+          <a class="btn btn-primary" href="mailto:Ed@thwack.golf?subject=Order%20Thwack%20tripod%20%246&body=Hi%20Ed%2C%0A%0AI%27d%20like%20to%20order%20a%20printed%20Thwack%20phone%20stand%20for%20%246.%0A%0AShip%20to%3A%0A">Buy for $6</a>
+        </div>
+        <div>
+          <h3>Buy the model · $1</h3>
+          <p>Print-in-place foldable stand. About 24g of filament, no assembly. Email for the file.</p>
+          <a class="btn btn-ghost" href="mailto:Ed@thwack.golf?subject=Thwack%20stand%20model%20%241&body=Hi%20Ed%2C%0A%0AI%27d%20like%20the%20Thwack%20phone%20stand%203D%20model%20for%20%241.%0A">Buy model for $1</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="wordmark">Thwack</span>
+      <p>Offline golf launch monitor.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../measures/">Measures</a>
+      <a href="../how/">How it works</a>
+      <a href="../tripod/">Tripod</a>
+      <a href="../Privacy/">Privacy</a>
+      <a href="mailto:Ed@thwack.golf">Ed@thwack.golf</a>
+    </div>
+    <p class="footer-note">© <span id="y"></span> Thwack. thwack.golf</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    window.THWACK_APP_STORE_URL = "https://apps.apple.com/xxxxxxxxxxxx";
+    document.querySelectorAll("[data-download]").forEach((el) => {
+      el.setAttribute("href", window.THWACK_APP_STORE_URL);
+    });
+  </script>
+</body>
+</html>

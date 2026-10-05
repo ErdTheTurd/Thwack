@@ -3,131 +3,99 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy | Thwack</title>
-  <meta name="description" content="Privacy policy for Thwack, the offline golf launch monitor." />
+  <title>Privacy | Thwack</title>
+  <meta name="description" content="Thwack keeps video on your phone. No account. No upload." />
+  <meta property="og:title" content="Privacy | Thwack" />
+  <meta property="og:description" content="Thwack keeps video on your phone. No account. No upload." />
+  <meta property="og:image" content="https://thwack.golf/assets/hero.jpg" />
+  <meta property="og:type" content="website" />
   <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/site.css" />
-  <style>
-    .legal {
-      width: min(720px, calc(100% - 2.5rem));
-      margin: 0 auto;
-      padding: calc(var(--header-h) + 2.5rem) 0 5rem;
-    }
-    .legal .brand {
-      font-size: 0.95rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--fairway);
-      font-weight: 700;
-      text-decoration: none;
-      font-family: var(--font-brand);
-    }
-    .legal h1 {
-      font-family: var(--font-brand);
-      font-weight: 800;
-      font-size: clamp(2.2rem, 6vw, 3.4rem);
-      letter-spacing: -0.045em;
-      margin: 0.85rem 0 0.4rem;
-      line-height: 1;
-    }
-    .meta {
-      color: var(--ink-soft);
-      margin: 0 0 2.25rem;
-    }
-    .legal section {
-      padding: 1.35rem 0;
-      border-top: 1px solid var(--line);
-    }
-    .legal section:last-of-type { border-bottom: 1px solid var(--line); }
-    .legal h2 {
-      font-family: var(--font-brand);
-      font-weight: 700;
-      font-size: 1.15rem;
-      letter-spacing: -0.02em;
-      margin: 0 0 0.55rem;
-    }
-    .legal p, .legal li { color: var(--ink-soft); margin: 0 0 0.7rem; }
-    .legal p:last-child, .legal ul:last-child { margin-bottom: 0; }
-    .legal ul { margin: 0; padding-left: 1.15rem; }
-    .legal li { margin: 0.35rem 0; }
-    .legal strong { color: var(--ink); font-weight: 600; }
-    .legal-back {
-      display: inline-block;
-      margin-top: 2rem;
-      font-family: var(--font-brand);
-      font-weight: 700;
-      text-decoration: none;
-    }
-  </style>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <a class="wordmark" href="../">Thwack</a>
+    <a class="wordmark" href="../" aria-label="Thwack home">Thwack</a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="https://apps.apple.com/xxxxxxxxxxxx" data-download>Get the app</a>
+      <a class="" href="../measures/">Measures</a>
+      <a class="" href="../how/">How it works</a>
+      <a class="" href="../practice/">Practice</a>
+      <a class="" href="../tripod/">Tripod</a>
+      <a class="is-active" href="../Privacy/">Privacy</a>
+      <a class="nav-cta" href="https://apps.apple.com/xxxxxxxxxxxx" data-download>Get the app</a>
     </nav>
   </header>
-
-  <main class="legal">
-    <p class="brand">Thwack</p>
-    <h1>Privacy Policy</h1>
-    <p class="meta">Effective October 3, 2026</p>
-
-    <section>
-      <h2>Summary</h2>
-      <p>Thwack is an offline golf launch monitor. Camera video, ball tracking, and shot numbers stay on your iPhone. No account. No upload. Airplane mode works.</p>
+  <main id="main" class="page">
+    <section class="section split">
+      <div class="split-copy">
+        <h2>On your phone.<br />Nowhere else.</h2>
+        <p>Video stays on the device. No account. No upload. Airplane mode is fine.</p>
+      </div>
+      <figure class="split-media">
+        <img src="../assets/ball.jpg" alt="Close view of a golf ball on a tee" width="1600" height="1060" loading="lazy" />
+      </figure>
     </section>
 
-    <section>
-      <h2>Information Thwack uses on your device</h2>
-      <ul>
-        <li><strong>Camera.</strong> Films setup and the swing so Thwack can find the ball, catch impact, and measure launch. Frames are processed on the phone.</li>
-        <li><strong>Motion sensors.</strong> Checks that the phone is steady and aimed correctly during setup.</li>
-        <li><strong>Photos (optional).</strong> If you allow it, Thwack can save tracer videos to Photos. It only asks for add-only access. It does not read your existing library.</li>
-        <li><strong>On-device storage.</strong> Shot history, calibration, settings, and clips stay in the app on your phone.</li>
-      </ul>
-    </section>
+    <div class="legal" style="padding-top:0">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective October 3, 2026</p>
 
-    <section>
-      <h2>What we do not collect</h2>
-      <ul>
-        <li>No cloud account or login</li>
-        <li>No advertising identifiers</li>
-        <li>No analytics that ship your swings somewhere else</li>
-        <li>No sale of personal information</li>
-      </ul>
-      <p>If something on the phone asks for network access, that is not Thwack uploading your video. Capture and tracking are built to run offline.</p>
-    </section>
+      <section>
+        <h2>Summary</h2>
+        <p>Thwack is an offline golf launch monitor. Camera video, ball tracking, and shot numbers stay on your iPhone. No account. No upload. Airplane mode works.</p>
+      </section>
 
-    <section>
-      <h2>Sharing</h2>
-      <p>We do not share your swing video or shot data with third parties. If you AirPlay to a TV or export a video from Photos, that is under your control.</p>
-    </section>
+      <section>
+        <h2>Information Thwack uses on your device</h2>
+        <ul>
+          <li><strong>Camera.</strong> Films setup and the swing so Thwack can find the ball, catch impact, and measure launch. Frames are processed on the phone.</li>
+          <li><strong>Motion sensors.</strong> Checks that the phone is steady and aimed correctly during setup.</li>
+          <li><strong>Photos (optional).</strong> If you allow it, Thwack can save tracer videos to Photos. It only asks for add-only access. It does not read your existing library.</li>
+          <li><strong>On-device storage.</strong> Shot history, calibration, settings, and clips stay in the app on your phone.</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Data retention and deletion</h2>
-      <p>Data stays on your device until you delete shots in the app or delete the app. Uninstalling Thwack removes its local data.</p>
-    </section>
+      <section>
+        <h2>What we do not collect</h2>
+        <ul>
+          <li>No cloud account or login</li>
+          <li>No advertising identifiers</li>
+          <li>No analytics that ship your swings somewhere else</li>
+          <li>No sale of personal information</li>
+        </ul>
+        <p>If something on the phone asks for network access, that is not Thwack uploading your video. Capture and tracking are built to run offline.</p>
+      </section>
 
-    <section>
-      <h2>Children</h2>
-      <p>Thwack is not aimed at kids under 13. We do not knowingly collect personal information from children.</p>
-    </section>
+      <section>
+        <h2>Sharing</h2>
+        <p>We do not share your swing video or shot data with third parties. If you AirPlay to a TV or export a video from Photos, that is under your control.</p>
+      </section>
 
-    <section>
-      <h2>Changes</h2>
-      <p>If this policy changes, we will update this page and the date above.</p>
-    </section>
+      <section>
+        <h2>Data retention and deletion</h2>
+        <p>Data stays on your device until you delete shots in the app or delete the app. Uninstalling Thwack removes its local data.</p>
+      </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Privacy questions: <a href="mailto:Ed@thwack.golf">Ed@thwack.golf</a></p>
-    </section>
+      <section>
+        <h2>Children</h2>
+        <p>Thwack is not aimed at kids under 13. We do not knowingly collect personal information from children.</p>
+      </section>
 
-    <a class="legal-back" href="../">Back to Thwack</a>
+      <section>
+        <h2>Changes</h2>
+        <p>If this policy changes, we will update this page and the date above.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Privacy questions: <a href="mailto:Ed@thwack.golf">Ed@thwack.golf</a></p>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -136,11 +104,40 @@
       <p>Offline golf launch monitor.</p>
     </div>
     <div class="footer-links">
-      <a href="./">Privacy</a>
+      <a href="../measures/">Measures</a>
+      <a href="../how/">How it works</a>
+      <a href="../tripod/">Tripod</a>
+      <a href="../Privacy/">Privacy</a>
       <a href="mailto:Ed@thwack.golf">Ed@thwack.golf</a>
     </div>
     <p class="footer-note">© <span id="y"></span> Thwack. thwack.golf</p>
   </footer>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    window.THWACK_APP_STORE_URL = "https://apps.apple.com/xxxxxxxxxxxx";
+    document.querySelectorAll("[data-download]").forEach((el) => {
+      el.setAttribute("href", window.THWACK_APP_STORE_URL);
+    });
+  </script>
+<style>
+  .legal { width: min(720px, calc(100% - 2.5rem)); margin: 0 auto; }
+  .legal h1 {
+    font-family: var(--font-brand); font-weight: 800;
+    font-size: clamp(2rem, 5vw, 2.8rem); letter-spacing: -0.04em; margin: 0 0 0.4rem;
+  }
+  .meta { color: var(--ink-soft); margin: 0 0 2rem; }
+  .legal section { padding: 1.25rem 0; border-top: 1px solid var(--line); }
+  .legal section:last-of-type { border-bottom: 1px solid var(--line); }
+  .legal h2 {
+    font-family: var(--font-brand); font-weight: 700; font-size: 1.1rem;
+    letter-spacing: -0.02em; margin: 0 0 0.5rem;
+  }
+  .legal p, .legal li { color: var(--ink-soft); margin: 0 0 0.65rem; }
+  .legal p:last-child, .legal ul:last-child { margin-bottom: 0; }
+  .legal ul { margin: 0; padding-left: 1.15rem; }
+  .legal li { margin: 0.3rem 0; }
+  .legal strong { color: var(--ink); font-weight: 600; }
+</style>
 </body>
 </html>

@@ -63,7 +63,7 @@ a { color: var(--fairway-deep); }
 }
 .skip:focus { left: 1rem; top: 1rem; }
 
-/* —— Header —— */
+/* -- Header -- */
 .site-header {
   position: fixed;
   inset: 0 0 auto;
@@ -111,7 +111,7 @@ a { color: var(--fairway-deep); }
   .site-nav a:not(.nav-cta) { display: none; }
 }
 
-/* —— Hero —— */
+/* -- Hero -- */
 .hero {
   position: relative;
   min-height: 100svh;
@@ -245,7 +245,7 @@ a { color: var(--fairway-deep); }
   background: color-mix(in srgb, currentColor 8%, transparent);
 }
 
-/* —— Sections —— */
+/* -- Sections -- */
 .section {
   width: min(1080px, calc(100% - 2.5rem));
   margin: 0 auto;
@@ -275,7 +275,7 @@ a { color: var(--fairway-deep); }
   font-size: 1.12rem;
 }
 
-/* Metrics — not cards: one horizontal composition */
+/* Metrics - not cards: one horizontal composition */
 .measures {
   position: relative;
 }
@@ -432,7 +432,7 @@ a { color: var(--fairway-deep); }
   .split-media { order: -1; }
 }
 
-/* Practice — editorial rows, not cards */
+/* Practice - editorial rows, not cards */
 .practice-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

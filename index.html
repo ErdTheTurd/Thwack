@@ -47,6 +47,25 @@
       </div>
     </section>
 
+    <section class="section signup" aria-labelledby="signup-heading">
+      <h2 id="signup-heading">Get one email when the big update drops</h2>
+      <p class="lede">Bug fixes, Find My Ball (guides you to your ball after the shot), and Thwack Pro upgraded capabilities. One email, no spam.</p>
+      <form id="update-signup" class="signup-form" action="https://formspree.io/f/mzeeokkp" method="POST">
+        <div class="signup-gotcha" aria-hidden="true">
+          <label for="signup-gotcha">Leave blank</label>
+          <input id="signup-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+        </div>
+        <input type="hidden" name="_subject" value="Thwack update signup" />
+        <label class="signup-label" for="signup-email">Email</label>
+        <div class="signup-row">
+          <input id="signup-email" type="email" name="email" required autocomplete="email" inputmode="email" />
+          <button class="btn btn-primary" type="submit">Notify me</button>
+        </div>
+        <p class="fine"><a href="Privacy/">Privacy</a></p>
+        <p id="signup-status" class="signup-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
     <section class="section download">
       <p class="brand brand-sm">Thwack</p>
       <h2>Ready when you are.</h2>
@@ -80,6 +99,50 @@
     document.querySelectorAll("[data-download]").forEach((el) => {
       el.setAttribute("href", window.THWACK_APP_STORE_URL);
     });
+
+    const signupForm = document.getElementById("update-signup");
+    const signupStatus = document.getElementById("signup-status");
+    if (signupForm && signupStatus && window.fetch) {
+      signupForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const submit = signupForm.querySelector("[type=submit]");
+        const email = signupForm.querySelector("[name=email]");
+        signupStatus.textContent = "";
+        signupStatus.classList.remove("is-ok", "is-error");
+        if (email) email.removeAttribute("aria-invalid");
+        if (submit) submit.disabled = true;
+        try {
+          const response = await fetch(signupForm.action, {
+            method: "POST",
+            body: new FormData(signupForm),
+            headers: { Accept: "application/json" }
+          });
+          if (response.ok) {
+            signupForm.reset();
+            signupStatus.textContent = "Thanks. One email when the update drops.";
+            signupStatus.classList.add("is-ok");
+            return;
+          }
+          let message = "Could not sign you up. Please try again.";
+          try {
+            const data = await response.json();
+            if (data && Array.isArray(data.errors) && data.errors.length) {
+              message = data.errors.map((error) => error.message).filter(Boolean).join(" ");
+            }
+          } catch (parseError) {
+            /* keep the fallback message */
+          }
+          signupStatus.textContent = message || "Could not sign you up. Please try again.";
+          signupStatus.classList.add("is-error");
+          if (email) email.setAttribute("aria-invalid", "true");
+        } catch (networkError) {
+          signupStatus.textContent = "Could not sign you up. Please try again.";
+          signupStatus.classList.add("is-error");
+        } finally {
+          if (submit) submit.disabled = false;
+        }
+      });
+    }
   </script>
 </body>
 </html>

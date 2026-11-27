@@ -3,88 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Measures | Thwack</title>
-  <meta name="description" content="Ball speed, launch angle, direction, carry, and shot tracer from Thwack." />
-  <meta property="og:title" content="Measures | Thwack" />
-  <meta property="og:description" content="Ball speed, launch angle, direction, carry, and shot tracer from Thwack." />
-  <meta property="og:image" content="https://thwack.golf/assets/hero.jpg" />
+  <title>The card · Thwack</title>
+  <meta name="description" content="Ball speed, launch, and direction come from the ball. Carry and spin are estimated, and labeled that way. A weak track comes back as Not sure." />
+  <meta name="theme-color" content="#080808" />
+  <meta property="og:title" content="The card · Thwack" />
+  <meta property="og:description" content="Ball speed, launch, and direction come from the ball. Carry and spin are estimated and labeled. A weak track comes back as Not sure." />
+  <meta property="og:image" content="https://thwack.golf/assets/icon.png" />
+  <meta property="og:url" content="https://thwack.golf/measures/" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="../assets/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="../assets/icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="../assets/fonts/anybody-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../assets/site.css" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="wordmark" href="../" aria-label="Thwack home">Thwack</a>
-    <nav class="site-nav" aria-label="Primary">
-      <a class="is-active" href="../measures/">Measures</a>
-      <a class="" href="../how/">How it works</a>
-      <a class="" href="../practice/">Practice</a>
-      <a class="" href="../tripod/">Tripod</a>
-      <a class="" href="../Privacy/">Privacy</a>
-      <a class="nav-cta" href="https://apps.apple.com/us/app/thwack-golf/id6818693265" data-download>Get the app</a>
-    </nav>
+    <div class="wrap header-inner">
+      <a class="brand" href="../" aria-label="Thwack home">
+        <img class="brand-mark" src="../assets/mark.svg" alt="" width="40" height="40" />
+        <span class="brand-name">Thwack</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../measures/" aria-current="page">Measures</a>
+        <a href="../how/">How</a>
+        <a href="../practice/">Practice</a>
+        <a href="../tripod/">Stand</a>
+        <a href="../Privacy/">Privacy</a>
+      </nav>
+      <a class="btn btn-lime" href="https://apps.apple.com/app/id6818693265">App Store</a>
+    </div>
   </header>
-  <main id="main" class="page">
-    <section class="section measures">
-      <div class="section-head">
-        <h2>What you get after every swing</h2>
-        <p>Hit, wait a beat, read the numbers.</p>
-      </div>
-      <ul class="metric-rail" role="list">
+
+  <main id="main" class="doc">
+    <div class="wrap">
+      <p class="kicker">What the card means</p>
+      <h1 class="page-title">Measured, or it says so.</h1>
+      <p class="lede">Hit, wait a few seconds, read it. Numbers that didn’t come straight off the ball’s flight are labeled estimated.</p>
+
+      <ul class="ledger">
         <li>
-          <span class="metric-name">Ball speed</span>
-          <span class="metric-hint">mph or km/h</span>
+          <span class="ledger-name">Ball speed</span>
+          <p>Read from where the ball is in the frames just after impact. Miles per hour or km/h.</p>
         </li>
         <li>
-          <span class="metric-name">Launch angle</span>
-          <span class="metric-hint">degrees up</span>
+          <span class="ledger-name">Launch angle</span>
+          <p>Degrees above the ground, from that same short stretch of flight.</p>
         </li>
         <li>
-          <span class="metric-name">Direction</span>
-          <span class="metric-hint">left / right of target</span>
+          <span class="ledger-name">Direction</span>
+          <p>Left or right of the target you aimed the phone at.</p>
         </li>
         <li>
-          <span class="metric-name">Carry</span>
-          <span class="metric-hint">estimated yards</span>
+          <span class="ledger-name">Carry</span>
+          <p>Not a tape measure. A ball-flight model, fed by speed, launch, and direction. The card marks it estimated. Yards or meters.</p>
         </li>
         <li>
-          <span class="metric-name">Shot tracer</span>
-          <span class="metric-hint">saved to Photos</span>
+          <span class="ledger-name">Spin</span>
+          <p>Not measured at all. Backspin and sidespin are typical values for the club you picked, because a phone camera doesn’t show the ball rotating. Ed hasn’t found a way around that. They’re labeled estimated.</p>
+        </li>
+        <li>
+          <span class="ledger-name">Tracer</span>
+          <p>The line drawn on the clip, from the ball Thwack actually followed. Save it to Photos, or share it. Add-only: the app doesn’t open the rest of your library.</p>
         </li>
       </ul>
-      <svg class="tracer-line" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,70 C280,70 420,10 600,18 S980,75 1200,8" fill="none" stroke="currentColor" stroke-width="2" pathLength="1" />
-      </svg>
-    </section>
+
+      <section class="verdict" aria-labelledby="unsure-heading">
+        <div class="verdict-grid">
+          <p class="kicker">The other result</p>
+          <h2 id="unsure-heading">Not sure.</h2>
+          <p class="verdict-copy">If the ball blends into the background, the light goes, or the phone moves, Thwack would rather say Not sure than hand you a number it guessed.</p>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-brand">
-      <span class="wordmark">Thwack</span>
-      <p>Offline golf launch monitor.</p>
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-name">Thwack</p>
+        <p class="footer-note">A practice tool, not a scientific launch monitor. The read depends on the light, where you put the phone, and whether the ball stands out. Use the numbers to compare shots.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="../measures/">Measures</a>
+        <a href="../how/">How</a>
+        <a href="../practice/">Practice</a>
+        <a href="../tripod/">Stand</a>
+        <a href="../Privacy/">Privacy</a>
+        <a href="https://apps.apple.com/app/id6818693265">App Store</a>
+        <a href="mailto:Ed@thwack.golf">Ed@thwack.golf</a>
+      </nav>
+      <p class="footer-meta">© <span id="y"></span> Edward Dunn · thwack.golf</p>
     </div>
-    <div class="footer-links">
-      <a href="../measures/">Measures</a>
-      <a href="../how/">How it works</a>
-      <a href="../tripod/">Tripod</a>
-      <a href="../Privacy/">Privacy</a>
-      <a href="mailto:Ed@thwack.golf">Ed@thwack.golf</a>
-    </div>
-    <p class="footer-note">© <span id="y"></span> Thwack. thwack.golf</p>
   </footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    window.THWACK_APP_STORE_URL = "https://apps.apple.com/us/app/thwack-golf/id6818693265";
-    document.querySelectorAll("[data-download]").forEach((el) => {
-      el.setAttribute("href", window.THWACK_APP_STORE_URL);
-    });
-  </script>
+  <script src="../assets/site.js"></script>
 </body>
 </html>

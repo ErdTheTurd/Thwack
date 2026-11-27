@@ -3,81 +3,96 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Practice | Thwack</title>
-  <meta name="description" content="Sessions, course mode, big-screen numbers, and tracer videos." />
-  <meta property="og:title" content="Practice | Thwack" />
-  <meta property="og:description" content="Sessions, course mode, big-screen numbers, and tracer videos." />
-  <meta property="og:image" content="https://thwack.golf/assets/hero.jpg" />
+  <title>Practice · Thwack</title>
+  <meta name="description" content="Sessions stay on your iPhone. Pro adds club stats, a dispersion map, and shot compare. Course mode is three fictional layouts. Putting is manual." />
+  <meta name="theme-color" content="#080808" />
+  <meta property="og:title" content="Practice · Thwack" />
+  <meta property="og:description" content="Sessions stay on your iPhone. Course mode is three fictional layouts. Putting is manual." />
+  <meta property="og:image" content="https://thwack.golf/assets/icon.png" />
+  <meta property="og:url" content="https://thwack.golf/practice/" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="../assets/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="../assets/icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="../assets/fonts/anybody-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../assets/site.css" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="wordmark" href="../" aria-label="Thwack home">Thwack</a>
-    <nav class="site-nav" aria-label="Primary">
-      <a class="" href="../measures/">Measures</a>
-      <a class="" href="../how/">How it works</a>
-      <a class="is-active" href="../practice/">Practice</a>
-      <a class="" href="../tripod/">Tripod</a>
-      <a class="" href="../Privacy/">Privacy</a>
-      <a class="nav-cta" href="https://apps.apple.com/us/app/thwack-golf/id6818693265" data-download>Get the app</a>
-    </nav>
+    <div class="wrap header-inner">
+      <a class="brand" href="../" aria-label="Thwack home">
+        <img class="brand-mark" src="../assets/mark.svg" alt="" width="40" height="40" />
+        <span class="brand-name">Thwack</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../measures/">Measures</a>
+        <a href="../how/">How</a>
+        <a href="../practice/" aria-current="page">Practice</a>
+        <a href="../tripod/">Stand</a>
+        <a href="../Privacy/">Privacy</a>
+      </nav>
+      <a class="btn btn-lime" href="https://apps.apple.com/app/id6818693265">App Store</a>
+    </div>
   </header>
-  <main id="main" class="page">
-    <section class="section practice">
-      <div class="section-head">
-        <h2>Useful on a real range day</h2>
-        <p>Not just one cool clip. A session you can work through.</p>
+
+  <main id="main" class="doc">
+    <div class="wrap">
+      <p class="kicker">After the basket</p>
+      <h1 class="page-title">A record, not one clip.</h1>
+      <p class="lede">Every shot is saved on the phone with its numbers and its clip, until you delete it. Nothing about that leaves the device.</p>
+
+      <h2 class="subhead">Free, and Pro</h2>
+      <div class="copy">
+        <p>The tracer and the launch numbers are free. Free history keeps the latest ten sessions.</p>
+        <p>Pro is the longer memory, and the sorting. Club-by-club averages for carry, ball speed, launch, and spread. A dispersion map of where the session went, and how far you missed left or right. Two shots side by side, so you can see what changed. History that doesn’t stop at ten. A free week, then monthly, yearly, or pay once.</p>
       </div>
-      <div class="practice-grid">
-        <article>
-          <h3>Practice sessions</h3>
-          <p>Save shots by club. Check speed and start line without opening a notes app.</p>
-        </article>
-        <article>
-          <h3>Course mode</h3>
-          <p>Fake holes for practice. Full shots and camera putts. On the green, putting mode measures roll and how close you are. Share the round when you’re done.</p>
-        </article>
-        <article>
-          <h3>Big-screen numbers</h3>
-          <p>AirPlay or HDMI to a TV so you can read speed from behind the ball.</p>
-        </article>
-        <article>
-          <h3>Tracer videos</h3>
-          <p>Export a tracer and drop it in Photos when you want to keep the swing.</p>
-        </article>
+
+      <h2 class="subhead">Fictional courses</h2>
+      <p class="copy">Not real venues. You play the holes with your own launch numbers. Putting is manual.</p>
+      <dl class="courses">
+        <div>
+          <dt>Pine Hollow</dt>
+          <dd>Tree-lined parkland. Keep it in the fairway.<span class="meta">9 holes · Par 36 · 3,360 yd</span></dd>
+        </div>
+        <div>
+          <dt>Cedar Ridge</dt>
+          <dd>Firm fairways and a few blind approaches.<span class="meta">9 holes · Par 36 · 3,365 yd</span></dd>
+        </div>
+        <div>
+          <dt>Windmill Links</dt>
+          <dd>Open ground. Wind is part of the game.<span class="meta">9 holes · Par 36 · 3,420 yd</span></dd>
+        </div>
+      </dl>
+
+      <h2 class="subhead">On a TV</h2>
+      <div class="copy">
+        <p>AirPlay, or a wired HDMI adapter. During a session or a round, the external screen shows big ball speed, launch, and carry, so you can read them without walking back to the phone.</p>
+        <p>Tracer color is a setting. Units too — miles and yards, or metric.</p>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-brand">
-      <span class="wordmark">Thwack</span>
-      <p>Offline golf launch monitor.</p>
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-name">Thwack</p>
+        <p class="footer-note">A practice tool, not a scientific launch monitor. The read depends on the light, where you put the phone, and whether the ball stands out. Use the numbers to compare shots.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="../measures/">Measures</a>
+        <a href="../how/">How</a>
+        <a href="../practice/">Practice</a>
+        <a href="../tripod/">Stand</a>
+        <a href="../Privacy/">Privacy</a>
+        <a href="https://apps.apple.com/app/id6818693265">App Store</a>
+        <a href="mailto:Ed@thwack.golf">Ed@thwack.golf</a>
+      </nav>
+      <p class="footer-meta">© <span id="y"></span> Edward Dunn · thwack.golf</p>
     </div>
-    <div class="footer-links">
-      <a href="../measures/">Measures</a>
-      <a href="../how/">How it works</a>
-      <a href="../tripod/">Tripod</a>
-      <a href="../Privacy/">Privacy</a>
-      <a href="mailto:Ed@thwack.golf">Ed@thwack.golf</a>
-    </div>
-    <p class="footer-note">© <span id="y"></span> Thwack. thwack.golf</p>
   </footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    window.THWACK_APP_STORE_URL = "https://apps.apple.com/us/app/thwack-golf/id6818693265";
-    document.querySelectorAll("[data-download]").forEach((el) => {
-      el.setAttribute("href", window.THWACK_APP_STORE_URL);
-    });
-  </script>
+  <script src="../assets/site.js"></script>
 </body>
 </html>
